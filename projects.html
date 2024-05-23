@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>collin-b1</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Freeman&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>collinb.me</h1>
+      <nav>
+        <ul class="links">
+          <li><a href="./index.html">home</a></li>
+          <li><a href="./projects.html">projects</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="projects">
+      <section class="card">
+        <h2>Synergy</h2>
+        <p>
+          Tile-moving puzzle game based on the classic
+          <a href="https://www.thinkfun.com/products/lunar-landing/"
+            >Lunar Landing</a
+          >
+          puzzle. It features 21 base levels and a level editor for creating and
+          sharing custom levels.
+        </p>
+        <img src="./assets/synergy_demo.gif" alt="Synergy Demo" />
+        <footer>
+          <ul class="links">
+            <li><a href="https://collinb.me/synergy/">Live Demo</a></li>
+            <li><a href="https://github.com/collin-b1/synergy">Github</a></li>
+          </ul>
+          <ul class="technologies">
+            <a href="https://www.typescriptlang.org/">
+              <img src="./assets/ts-logo.svg" alt="Typescript" />
+            </a>
+            <a href="https://react.dev/">
+              <img src="./assets/react-logo.svg" alt="React" />
+            </a>
+            <a href="https://vitejs.dev/">
+              <img src="./assets/vitejs-logo.svg" alt="Vite" />
+            </a>
+          </ul>
+        </footer>
+      </section>
+      <section class="card">
+        <h2>Gameboy Emulator <span class="red">(Work in progress)</span></h2>
+        <p>
+          Gameboy emulator written in C++. It currently only has functionality
+          to read in a ROM and execute opcodes, but I am working on finishing
+          the memory bus and implementing the screen.
+        </p>
+        <footer>
+          <ul class="links">
+            <li>
+              <a href="https://github.com/collin-b1/gameboy-emulator">Github</a>
+            </li>
+          </ul>
+          <ul class="technologies">
+            <a href="https://en.wikipedia.org/wiki/C%2B%2B">
+              <img src="./assets/cpp-logo.svg" alt="C++" />
+            </a>
+            <a href="https://www.libsdl.org/">
+              <img src="./assets/sdl-logo.svg" alt="SDL" />
+            </a>
+          </ul>
+        </footer>
+      </section>
+      <section class="card">
+        <h2>SourceMan</h2>
+        <p>
+          Allows you to play hangman inside the console of Source Engine games.
+          It communicates with the game by reading and writing configuration
+          files to the game's cfg folder.
+        </p>
+        <img src="./assets/sourceman_demo.png" alt="SourceMan Demo" />
+        <footer>
+          <ul class="links">
+            <li>
+              <a href="https://github.com/collin-b1/SourceMan/">Github</a>
+            </li>
+          </ul>
+          <ul class="technologies">
+            <a
+              href="https://en.wikipedia.org/wiki/Java_%28programming_language%29"
+            >
+              <img src="./assets/java-logo.svg" alt="Java" />
+            </a>
+          </ul>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
