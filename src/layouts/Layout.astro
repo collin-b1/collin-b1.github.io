@@ -24,9 +24,7 @@ const currentPath = Astro.url.pathname;
       <nav>
         <ul class="links">
           <li>{currentPath === "/" ? "projects" : <a href="/">projects</a>}</li>
-          <li>
-            {currentPath === "/news" ? "news" : <a href="/news">news</a>}
-          </li>
+          <li>{currentPath === "/news" ? "news" : <a href="/news">news</a>}</li>
           <li>
             {currentPath === "/about" ? "about" : <a href="/about">about</a>}
           </li>
