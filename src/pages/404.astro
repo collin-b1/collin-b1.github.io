@@ -1,0 +1,16 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+
+const pageRequested = new URL(Astro.request.url).pathname;
+---
+
+<Layout>
+  <main>
+    <Card title="Page not found!">
+      <span slot="description">
+        The requested page <b>{pageRequested}</b> is not available.
+      </span>
+    </Card>
+  </main>
+</Layout>
