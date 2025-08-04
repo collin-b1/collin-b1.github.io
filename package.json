@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/noto-sans-display": "^5.2.7",
+    "@fontsource/freeman": "^5.2.6",
     "astro": "^5.5.6"
   },
   "devDependencies": {

@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import "@fontsource/freeman";
+import "@fontsource-variable/noto-sans-display";
 
 const { title } = Astro.props;
 const currentPath = Astro.url.pathname;
@@ -11,12 +13,6 @@ const currentPath = Astro.url.pathname;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title ? `collinb.me | ${title}` : "collinb.me"}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Freeman&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <header>
