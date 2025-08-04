@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+
+type Link = {
+  href: string;
+  label: string;
+};
+
+type Icon = {
+  href: string;
+  imgSrc: ImageMetadata;
+  alt: string;
+};
+
+interface Props {
+  links?: Link[];
+  icons?: Icon[];
+}
+
+const { links = [], icons = [] } = Astro.props;
+---
+
+<footer>
+  <ul class="links">
+    {links.map((link) => <li>{<a href={link.href}>{link.label}</a>}</li>)}
+  </ul>
+  <ul class="icons">
+    {
+      icons.map((icon) => (
+        <li>
+          {
+            <a href={icon.href}>
+              <Image
+                src={icon.imgSrc}
+                alt={icon.alt}
+                height="24"
+                loading="lazy"
+              />
+            </a>
+          }
+        </li>
+      ))
+    }
+  </ul>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    margin-top: auto;
+    width: 100%;
+  }
+
+  .icons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 0.5rem;
+  }
+
+  ul.icons {
+    list-style-type: none;
+  }
+
+  ul.icons li > * {
+    display: flex;
+  }
+
+  ul.icons img {
+    height: 1.5rem !important;
+    min-width: 1.5rem !important;
+  }
+
+  @media screen and (min-width: 1200px) {
+    footer {
+      flex-direction: row;
+    }
+  }
+</style>

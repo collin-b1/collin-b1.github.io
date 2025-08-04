@@ -1,0 +1,176 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import CardFooter from "../components/CardFooter.astro";
+import { Image } from "astro:assets";
+
+import gameboyDemo from "../assets/gameboy_demo.png";
+import bassgptDemo from "../assets/bassgpt_demo.jpg";
+import sourcemanDemo from "../assets/sourceman_demo.png";
+import synergyDemo from "../assets/synergy_demo.gif";
+
+import arduinoIcon from "../assets/arduino-logo.svg";
+import cppIcon from "../assets/cpp-logo.svg";
+import javaIcon from "../assets/java-logo.svg";
+import tsIcon from "../assets/ts-logo.svg";
+import reactIcon from "../assets/react-logo.svg";
+import viteIcon from "../assets/vitejs-logo.svg";
+import qtIcon from "../assets/qt-logo.svg";
+---
+
+<Layout title="projects">
+  <main>
+    <Card title="Gameboy Emulator">
+      <span slot="description">
+        Gameboy emulator written in C++ with Qt6 for the UI.
+      </span>
+      <div slot="media">
+        <Image src={gameboyDemo} alt="Gameboy Emulator Demo" loading="lazy" />
+      </div>
+      <CardFooter
+        slot="footer"
+        links={[
+          {
+            href: "https://github.com/collin-b1/gameboy-emulator",
+            label: "GitHub",
+          },
+        ]}
+        icons={[
+          {
+            href: "https://en.wikipedia.org/wiki/C%2B%2B",
+            imgSrc: cppIcon,
+            alt: "C++",
+          },
+          {
+            href: "https://www.qt.io/product/qt6",
+            imgSrc: qtIcon,
+            alt: "Qt6",
+          },
+        ]}
+      />
+    </Card>
+
+    <Card title="BassGPT (RevolutionUC 2025)">
+      <span slot="description">
+        Big Mouth Billy Bass modded to take user input and respond using Google
+        Gemini and ElevenLabs text-to-speech. TTS file is processed and movement
+        data is sent to ESP8266 through webserver to fish. Winner of
+        <strong>Most Useless Hack</strong> category.
+      </span>
+      <div slot="media">
+        <Image src={bassgptDemo} alt="BassGPT Demo" loading="lazy" />
+      </div>
+      <CardFooter
+        slot="footer"
+        links={[
+          { href: "https://devpost.com/software/bassgpt", label: "Devpost" },
+          { href: "https://github.com/collin-b1/rev-uc-2025", label: "GitHub" },
+        ]}
+        icons={[
+          {
+            href: "https://www.arduino.cc/",
+            imgSrc: arduinoIcon,
+            alt: "Arduino",
+          },
+          {
+            href: "https://en.wikipedia.org/wiki/C%2B%2B",
+            imgSrc: cppIcon,
+            alt: "C++",
+          },
+          {
+            href: "https://en.wikipedia.org/wiki/Java_%28programming_language%29",
+            imgSrc: javaIcon,
+            alt: "Java",
+          },
+        ]}
+      />
+    </Card>
+
+    <Card title="Synergy">
+      <span slot="description">
+        Tile-moving puzzle game based on the classic
+        <a href="https://www.thinkfun.com/products/lunar-landing/"
+          >Lunar Landing</a
+        >
+        puzzle. It features 21 base levels and a level editor for creating and sharing
+        custom levels.
+      </span>
+      <div slot="media">
+        <Image src={synergyDemo} alt="Synergy Demo" loading="lazy" />
+      </div>
+      <CardFooter
+        slot="footer"
+        links={[
+          { href: "https://collinb.me/synergy/", label: "Live Demo" },
+          { href: "https://github.com/collin-b1/synergy", label: "GitHub" },
+        ]}
+        icons={[
+          {
+            href: "https://www.typescriptlang.org/",
+            imgSrc: tsIcon,
+            alt: "Typescript",
+          },
+          {
+            href: "https://react.dev/",
+            imgSrc: reactIcon,
+            alt: "React",
+          },
+          {
+            href: "https://vitejs.dev/",
+            imgSrc: viteIcon,
+            alt: "Vite",
+          },
+        ]}
+      />
+    </Card>
+
+    <Card title="SourceMan">
+      <span slot="description">
+        Allows you to play hangman inside the console of Source Engine games. It
+        communicates with the game by reading and writing configuration files to
+        the game's cfg folder.
+      </span>
+      <div slot="media">
+        <Image src={sourcemanDemo} alt="SourceMan Demo" loading="lazy" />
+      </div>
+      <CardFooter
+        slot="footer"
+        links={[
+          {
+            href: "https://github.com/collin-b1/SourceMan/",
+            label: "GitHub",
+          },
+        ]}
+        icons={[
+          {
+            href: "https://en.wikipedia.org/wiki/Java_%28programming_language%29",
+            imgSrc: javaIcon,
+            alt: "Java",
+          },
+        ]}
+      />
+    </Card>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: grid;
+    grid-template-columns: 1;
+    margin-bottom: 1rem;
+  }
+
+  /* Mobile */
+  @media screen and (min-width: 480px) {
+    main {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  /* Tablet Landscape*/
+  @media screen and (min-width: 960px) {
+    main {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

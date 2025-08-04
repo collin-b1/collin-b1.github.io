@@ -1,0 +1,54 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main>
+    <Card title="About">
+      <span slot="description">
+        Hello! I'm a Computer Science student at the University of Cincinnati,
+        and this is my personal website. This is mainly a place for me to post
+        projects I'm working on and other random ideas.
+      </span>
+    </Card>
+    <Card title="Contact">
+      <span slot="description">You can reach me at:</span>
+      <img slot="media" src="/assets/email.png" alt="Email" id="email" />
+    </Card>
+    <Card title="Other Links">
+      <ul slot="media">
+        <li>
+          <a href="https://github.com/collin-b1">Github</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/collin_b1/">Instagram</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/barrettcollin/">LinkedIn</a>
+        </li>
+      </ul>
+    </Card>
+  </main>
+</Layout>
+
+<style>
+  #email {
+    width: auto;
+    height: 1rem;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #email {
+      -webkit-filter: invert(1);
+      filter: invert(1);
+    }
+  }
+</style>
