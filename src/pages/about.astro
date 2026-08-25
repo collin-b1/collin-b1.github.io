@@ -1,6 +1,9 @@
 ---
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import emailImg from "../assets/email.png";
 ---
 
 <Layout title="about">
@@ -14,7 +17,7 @@ import Layout from "../layouts/Layout.astro";
     </Card>
     <Card title="Contact">
       <span slot="description">You can reach me at:</span>
-      <img slot="media" src="/assets/email.png" alt="Email" id="email" />
+      <Image slot="media" src={emailImg} alt="Email" id="email" />
     </Card>
     <Card title="Other Links">
       <ul slot="media">

@@ -19,11 +19,19 @@ const currentPath = Astro.url.pathname;
       <h1>collinb.me</h1>
       <nav>
         <ul class="links">
-          <li>{currentPath === "/" ? "projects" : <a href="/">projects</a>}</li>
+          <li>
+            {
+              currentPath === "/" ? (
+                <span aria-current="page">projects</span>
+              ) : (
+                <a href="/">projects</a>
+              )
+            }
+          </li>
           <li>
             {
               currentPath.startsWith("/news") ? (
-                "news"
+                <span aria-current="page">news</span>
               ) : (
                 <a href="/news">news</a>
               )
@@ -32,7 +40,7 @@ const currentPath = Astro.url.pathname;
           <li>
             {
               currentPath.startsWith("/about") ? (
-                "about"
+                <span aria-current="page">about</span>
               ) : (
                 <a href="/about">about</a>
               )
