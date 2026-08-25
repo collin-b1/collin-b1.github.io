@@ -1,0 +1,24 @@
+$screen-sm: 480px;
+$screen-md: 960px;
+$screen-lg: 1200px;
+
+/* Mobile */
+@mixin sm {
+  @media screen and (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+/* Tablet Landscape */
+@mixin md {
+  @media screen and (min-width: $screen-md) {
+    @content;
+  }
+}
+
+/* Desktop */
+@mixin lg {
+  @media screen and (min-width: $screen-lg) {
+    @content;
+  }
+}

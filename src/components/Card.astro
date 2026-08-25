@@ -15,32 +15,32 @@ const { title } = Astro.props;
   <slot name="footer" />
 </section>
 
-<style>
+<style lang="scss">
   .card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--color-fg);
     padding: 1rem 1.5rem;
-  }
 
-  .card > *:not(:last-child) {
-    margin-bottom: 0.5rem;
-  }
+    > *:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
 
-  .card > h2 {
-    font-size: 1.25rem;
-  }
+    > h2 {
+      font-size: 1.25rem;
 
-  .card > h2:not(:first-child) {
-    margin-top: 1.5rem;
-  }
+      &:not(:first-child) {
+        margin-top: 1.5rem;
+      }
+    }
 
-  .card > p {
-    color: var(--color-text-secondary);
-    flex: 1;
-    text-align: justify;
-    text-justify: inter-word;
+    > p {
+      color: var(--color-text-secondary);
+      flex: 1;
+      text-align: justify;
+      text-justify: inter-word;
+    }
   }
 
   .media :global(img) {

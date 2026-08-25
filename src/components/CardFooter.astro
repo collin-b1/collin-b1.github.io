@@ -44,7 +44,7 @@ const { links = [], icons = [] } = Astro.props;
   </ul>
 </footer>
 
-<style>
+<style lang="scss">
   footer {
     display: flex;
     gap: 0.5rem;
@@ -53,28 +53,25 @@ const { links = [], icons = [] } = Astro.props;
     width: 100%;
   }
 
-  .icons {
+  ul.icons {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
     flex: 1;
     gap: 0.5rem;
-  }
-
-  ul.icons {
     list-style-type: none;
+
+    li > * {
+      display: flex;
+    }
+
+    img {
+      height: 1.5rem !important;
+      min-width: 1.5rem !important;
+    }
   }
 
-  ul.icons li > * {
-    display: flex;
-  }
-
-  ul.icons img {
-    height: 1.5rem !important;
-    min-width: 1.5rem !important;
-  }
-
-  @media screen and (min-width: 1200px) {
+  @include lg {
     footer {
       flex-direction: row;
     }

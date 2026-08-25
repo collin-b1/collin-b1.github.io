@@ -152,22 +152,20 @@ import qtIcon from "../assets/qt-logo.svg";
   </main>
 </Layout>
 
-<style>
+<style lang="scss">
   main {
     display: grid;
     grid-template-columns: 1;
     margin-bottom: 1rem;
   }
 
-  /* Mobile */
-  @media screen and (min-width: 480px) {
+  @include sm {
     main {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
-  /* Tablet Landscape*/
-  @media screen and (min-width: 960px) {
+  @include md {
     main {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
