@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+import "@fontsource/freeman";
+import "@fontsource-variable/noto-sans-display";
+
+const { title } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title ? `CS5160 | ${title}` : "CS5160 - Computer Graphics"}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Collin Barrett - CS5160</h1>
+      <nav>
+        <ul class="links">
+          <li>
+            {
+              currentPath === "/cs5160" ? (
+                <span aria-current="page">Overview</span>
+              ) : (
+                <a href="/cs5160">Overview</a>
+              )
+            }
+          </li>
+          <li>
+            {
+              currentPath.startsWith("/cs5160/project1") ? (
+                <span aria-current="page">Project 1</span>
+              ) : (
+                <a href="/cs5160/project1">Project 1</a>
+              )
+            }
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <slot />
+    <footer>
+      <ul>
+        <li>
+          <a href="/">collinb.me</a> &copy;&nbsp;
+          {new Date().getFullYear()}
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
